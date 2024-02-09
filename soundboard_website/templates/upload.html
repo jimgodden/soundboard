@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>Flask Button</title>
+</head>
+
+<body>
+  <h1>Upload an Image</h1>
+    <form method="post" action="/upload_file" enctype="multipart/form-data">
+      <h2>Upload an Image in the form on the left and a sound in the form on the right..... please</h2>
+      <input type="file" name="image" accept="image/*">
+      <input type="file" name="sound" accept=".mp3,audio/*">
+      <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

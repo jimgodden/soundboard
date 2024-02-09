@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Buttons with Flask</title>
+</head>
+<body>
+    <h1>Dynamic Buttons</h1>
+
+    <form action="/add_button" method="post">
+        <label for="button_text">Button Text:</label>
+        <input type="text" id="button_text" name="button_text" required>
+        <button type="submit">Add Button</button>
+    </form>
+
+    {% for button in buttons %}
+        <button>{{ button }}</button>
+    {% endfor %}
+</body>
+</html>

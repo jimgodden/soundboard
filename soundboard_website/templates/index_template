@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html>
+<head>
+  <title>Flask Button</title>
+</head>
+
+<body>
+  <h1>SOUNDBORED!</h1>
+  <h2>Upload Here!</h2>
+  <form method="post" action="/button-clicked">
+    <input type="submit" value="UPLOAD">
+  </form>
+
+  <form method="post" action="/image_button-clicked">
+    <input type="image" src="{{ url_for('static', filename='images/joanas_guiide_error.png') }}" alt="WTF WHERE IS THE IMAGE?!?!?!?" width="300" height="200">
+  </form>
+
+  <form method="post" action="/image_button-clicked">
+    <input type="image" src="{{ url_for('static', filename='images/joanas_guiide_error.png') }}" alt="WTF WHERE IS THE IMAGE?!?!?!?" width="300" height="200">
+  </form>
+
+</body>
+</html>

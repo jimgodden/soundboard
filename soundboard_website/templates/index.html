@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html>
+<head>
+  <title>Flask Button</title>
+</head>
+
+<body>
+  <h1>SOUNDBORED!</h1>
+  <h2>Upload Here!</h2>
+  <form method="post" action="/button-clicked">
+    <input type="submit" value="UPLOAD">
+  </form>
+
+
+  <h2>Other buttons</h2>
+  {% for button in buttons %}
+  <form action="/handle_button_click" method="post">
+    <input type="hidden" name="label" value="{{ button.label }}">
+    <input type="image" src="{{ button.image_url }}" alt="WTF WHERE IS THE IMAGE?!?!?!?" name="label" value="{{ button.label }}" width="300" height="200">
+  </form>
+  {% endfor %}
+
+</body>
+</html>
